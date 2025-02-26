@@ -5,7 +5,14 @@
   "module": "./dist/bundle.esm.js",
   "browser": "./dist/bundle.esm.js",
   "types": "./dist/index.d.ts",
-  "exports": "./dist/bundle.esm.js",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/bundle.esm.js",
+      "require": "./dist/bundle.cjs.js",
+      "default": "./dist/bundle.cjs.js"
+    }
+  },
   "type": "module",
   "files": [
     "dist"
