@@ -1,0 +1,36 @@
+{
+  "name": "@transform-in/sdk",
+  "version": "1.0.0",
+  "main": "dist/bundle.cjs.js",
+  "module": "dist/bundle.esm.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    "types": "./dist/index.d.ts",
+    "import": "./dist/bundle.esm.js",
+    "require": "./dist/bundle.cjs.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "dev": "rollup -c --watch",
+    "build": "rollup -c",
+    "test": "vitest",
+    "test:watch": "vitest --watch"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^28.0.2",
+    "@rollup/plugin-node-resolve": "^16.0.0",
+    "@types/file-type": "^10.9.3",
+    "@types/js-base64": "^3.3.1",
+    "file-type": "^20.1.0",
+    "rollup": "^4.34.8",
+    "rollup-plugin-typescript2": "^0.36.0",
+    "tslib": "^2.8.1",
+    "vitest": "^3.0.6"
+  },
+  "dependencies": {
+    "js-base64": "^3.7.7"
+  }
+}

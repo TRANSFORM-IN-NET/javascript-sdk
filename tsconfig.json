@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "module": "ES6", // or "ESNext" for the latest version
+    "target": "ES6", // or "ESNext"
+    "declaration": true,
+    "outDir": "./dist",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "paths": {
+      "tslib" : ["../../node_modules/tslib/tslib.d.ts"]
+    }
+  },
+  "include": ["src/**/*"]
+}
