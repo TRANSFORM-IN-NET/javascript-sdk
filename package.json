@@ -1,6 +1,6 @@
 {
   "name": "@transform-in/sdk",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "main": "dist/bundle.cjs.js",
   "module": "dist/bundle.esm.js",
   "types": "dist/index.d.ts",
@@ -16,6 +16,9 @@
   "scripts": {
     "dev": "rollup -c --watch",
     "build": "rollup -c",
+    "build:prod": "NODE_ENV=production rollup -c",
+    "prebuild:prod": "npx bumpp",
+    "postbuild:prod": "npm publish --access public",
     "test": "vitest",
     "test:watch": "vitest --watch"
   },
