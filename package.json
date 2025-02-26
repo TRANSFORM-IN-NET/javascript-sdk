@@ -9,6 +9,14 @@
     "import": "./dist/bundle.esm.js",
     "require": "./dist/bundle.cjs.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TRANSFORM-IN-NET/javascript-sdk"
+  },
+  "author": {
+    "name": "creazy231",
+    "url": "https://github.com/creazy231"
+  },
   "files": [
     "dist"
   ],
@@ -18,7 +26,7 @@
     "build": "rollup -c",
     "build:prod": "NODE_ENV=production rollup -c",
     "prebuild:prod": "npx bumpp",
-    "postbuild:prod": "npm publish --access public",
+    "postbuild:prod": "npm publish --access public --tag beta",
     "test": "vitest",
     "test:watch": "vitest --watch"
   },
