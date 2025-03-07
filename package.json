@@ -1,31 +1,31 @@
 {
   "name": "@transform-in/sdk",
-  "version": "0.0.1-beta.5",
-  "main": "./dist/bundle.cjs.js",
-  "module": "./dist/bundle.esm.js",
-  "browser": "./dist/bundle.esm.js",
-  "types": "./dist/index.d.ts",
-  "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/bundle.esm.js",
-      "require": "./dist/bundle.cjs.js",
-      "default": "./dist/bundle.cjs.js"
-    }
-  },
   "type": "module",
-  "files": [
-    "dist"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/TRANSFORM-IN-NET/javascript-sdk"
-  },
+  "version": "0.0.1-beta.6",
   "author": {
     "name": "creazy231",
     "url": "https://github.com/creazy231"
   },
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TRANSFORM-IN-NET/javascript-sdk"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/bundle.cjs.js",
+      "import": "./dist/bundle.esm.js",
+      "default": "./dist/bundle.cjs.js"
+    }
+  },
+  "main": "./dist/bundle.cjs.js",
+  "module": "./dist/bundle.esm.js",
+  "browser": "./dist/bundle.esm.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "dev": "rollup -c --watch",
     "build": "rollup -c",
@@ -34,6 +34,9 @@
     "postbuild:prod": "npm publish --access public --tag beta",
     "test": "vitest",
     "test:watch": "vitest --watch"
+  },
+  "dependencies": {
+    "js-base64": "^3.7.7"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^28.0.2",
@@ -46,8 +49,5 @@
     "rollup-plugin-typescript2": "^0.36.0",
     "tslib": "^2.8.1",
     "vitest": "^3.0.6"
-  },
-  "dependencies": {
-    "js-base64": "^3.7.7"
   }
 }
