@@ -1,0 +1,7 @@
+
+[2K[1G[1myarn run v1.22.22[22m
+[2K[1G[2m$ rollup -c[22m
+[36m
+[1msrc/index.ts[22m → [1mdist/bundle.cjs.js, dist/bundle.esm.js[22m...[39m
+[32mcreated [1mdist/bundle.cjs.js, dist/bundle.esm.js[22m in [1m618ms[22m[39m
+[2K[1G✨  Done in 0.92s.
