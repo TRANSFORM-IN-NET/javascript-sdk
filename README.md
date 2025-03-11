@@ -4,7 +4,7 @@
 
 <hr>
 
-# Transform.in JavaScript SDK
+# TRANSFORM.IN - JavaScript SDK
 
 [![npm version](https://img.shields.io/npm/v/@transform-in/sdk.svg)](https://www.npmjs.com/package/@transform-in/sdk)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
