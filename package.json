@@ -1,7 +1,7 @@
 {
   "name": "@transform-in/sdk",
   "type": "module",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": {
     "name": "creazy231",
     "url": "https://github.com/creazy231"
@@ -31,7 +31,7 @@
     "build": "rollup -c",
     "build:prod": "NODE_ENV=production rollup -c",
     "prebuild:prod": "npx bumpp",
-    "postbuild:prod": "npm publish --access public --tag beta",
+    "postbuild:prod": "# npm publish --access public",
     "test": "vitest",
     "test:watch": "vitest --watch"
   },
