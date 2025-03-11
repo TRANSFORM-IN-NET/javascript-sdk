@@ -8,7 +8,7 @@ The official JavaScript SDK for [TRANSFORM.IN](https://transform.in.net) - a pow
 [📚 Documentation](https://docs.transform.in.net/s/2838c104-8428-455f-88cc-2e608789b6ad)
 
 <p align="center">
-  <img src="./assets/transform-in-logo.png" alt="Transform.in Logo" width="400"/>
+  <img src="./assets/transform-in-logo.png" alt="Transform.in Logo" width="500"/>
 </p>
 
 ## Features
@@ -186,7 +186,7 @@ if (videoPreparation.success) {
 | `h` | Height in pixels | number | `h: 200` | Images, Videos |
 | `f` | Output format | string | `f: 'webp'` | Images: webp, jpg, png, etc.<br>Videos: mp4 |
 | `q` | Quality (1-100) | number | `q: 80` | Images, Videos |
-| `bl` | Blur amount | number | `bl: 5` | Images only |
+| `bl` | Blur amount | number | `bl: 5` | Images, Videos |
 
 ## Error Handling
 
