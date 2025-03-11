@@ -1,9 +1,3 @@
-<p align="center">
-  <img src="./assets/transform-in-logo.png" alt="Transform.in Logo" width="400"/>
-</p>
-
-<hr>
-
 # TRANSFORM.IN - JavaScript SDK
 
 [![npm version](https://img.shields.io/npm/v/@transform-in/sdk.svg)](https://www.npmjs.com/package/@transform-in/sdk)
@@ -12,6 +6,10 @@
 The official JavaScript SDK for [TRANSFORM.IN](https://transform.in.net) - a powerful image and video transformation and optimization service.
 
 [📚 Documentation](https://docs.transform.in.net/s/2838c104-8428-455f-88cc-2e608789b6ad)
+
+<p align="center">
+  <img src="./assets/transform-in-logo.png" alt="Transform.in Logo" width="400"/>
+</p>
 
 ## Features
 
