@@ -7,6 +7,7 @@ const API_BASE_URL = process.env.NODE_ENV === "production" ? "https://api.transf
 interface TransformInOptions {
   project_id: string;
   api_key: string;
+  base_url?: string;
 }
 
 interface PrepareTransformationResponse {
@@ -89,6 +90,7 @@ interface NSFWInfo {
 class TransformIn {
   private readonly api_key: string;
   private readonly project_id: string;
+  private readonly base_url: string;
 
   constructor(options: TransformInOptions) {
     if (!options.api_key) {
@@ -102,6 +104,7 @@ class TransformIn {
     }
 
     this.project_id = options.project_id;
+    this.base_url = options.base_url || API_BASE_URL;
   }
 
   private async fetch(url: string, options: RequestInit): Promise<Response> {
@@ -109,7 +112,7 @@ class TransformIn {
       "X-API-KEY": this.api_key,
       ...options.headers,
     };
-    return fetch(`${API_BASE_URL}${url}`, {
+    return fetch(`${this.base_url}${url}`, {
       ...options,
       headers,
     });
@@ -181,10 +184,10 @@ class TransformIn {
         .map(([ key, value ]) => `${key}:${value}`)
         .join(",");
 
-      const requestUrl = new URL(`/transformation/${this.project_id}/${this.api_key}/${base64}${optionsString ? `/${optionsString}` : ""}?prepare=1`, API_BASE_URL);
+      const requestUrl = new URL(`/transformation/${this.project_id}/${this.api_key}/${base64}${optionsString ? `/${optionsString}` : ""}?prepare=1`, this.base_url);
       if (_await) requestUrl.searchParams.set("await", "1");
 
-      const response = await this.fetch(requestUrl.toString().replace(API_BASE_URL, ""), {
+      const response = await this.fetch(requestUrl.toString().replace(this.base_url, ""), {
         method: "GET",
       });
       return response.json();
@@ -204,7 +207,7 @@ class TransformIn {
       .map(([ key, value ]) => `${key}:${value}`)
       .join(",");
 
-    return `${API_BASE_URL}/transformation/${this.project_id}/${this.api_key}/${base64}${optionsString ? `/${optionsString}` : ""}`;
+    return `${this.base_url}/transformation/${this.project_id}/${this.api_key}/${base64}${optionsString ? `/${optionsString}` : ""}`;
   }
 }
 
